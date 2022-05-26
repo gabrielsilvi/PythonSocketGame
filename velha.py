@@ -1,3 +1,5 @@
+from sys import stdout
+
 import numpy as np
 from random import *
 
@@ -54,8 +56,12 @@ class GameState:
         Imprime o tabuleiro em um formato visual.
         """
         print("+---+---+---+")
+        a = 0
         for row in self.board:
-            print('|{}|{}|{}|'.format(row[0].center(3, ' '), row[1].center(3, ' '), row[2].center(3, ' ')))
+
+            stdout.write('|{}|{}|{}|'.format(row[0].center(3, ' '), row[1].center(3, ' '), row[2].center(3, ' ')))
+            print(' ',a)
+            a=a+1
             print("+---+---+---+")
 
     # -------------------------------------------------

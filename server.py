@@ -25,7 +25,9 @@ while True:
 
         # Faz uma jogada aleatoria
         board.moveRandom('o')
-        print('Eu joguei:')
+        print('Servidor jogou:')
+        print("  0   1   2  ")
+
         board.print()
 
         # Envia o tabuleiro para o jogador
@@ -38,18 +40,20 @@ while True:
 
             # Checa se a conexao do jogador foi terminada
             if not data:
-                print('Jogador se foi. :(')
+                print('Cliente desconectado. :(')
                 break
 
             # Converte para string e restaura no tabuleiro
             board.restore(data.decode('utf-8'))
 
-            print('O jogador jogou:')
+            print('O cliene jogou:')
+            print("  0   1   2  ")
             board.print()
 
             # Faz outra jogada aleatoria
             board.moveRandom('o')
-            print('Eu joguei:')
+            print('Servidor jogou:')
+            print("  0   1   2  ")
             board.print()
 
             # Envia o tabuleiro para o jogador

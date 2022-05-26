@@ -23,6 +23,7 @@ try:
         board.restore(data.decode('utf-8'))
 
         print('O servidor jogou:')
+        print("  0   1   2  ")
         board.print()
 
         print('Faça a sua jogada:')
